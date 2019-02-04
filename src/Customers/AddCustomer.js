@@ -19,7 +19,7 @@ class AddCustomer extends React.Component {
             company: '',
             phone_number: '',
             mobile_number: '',
-            sex: '',
+            sex: 'male',
             loading: false
         };
     }
@@ -107,7 +107,7 @@ class AddCustomer extends React.Component {
                     </div>
                     <div className="form-group">
                         <label>DOB</label>
-                        <input name="dob" onChange={this.onChange} value={this.state.dob} className="form-control" placeholder="Enter DOB" />
+                        <input  type= "date" name="dob" onChange={this.onChange} value={this.state.dob} className="form-control" placeholder="Enter DOB" />
                     </div>
                     <div className="form-group">
                         <label>Gender</label>
