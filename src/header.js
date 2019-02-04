@@ -26,7 +26,7 @@ class Header extends Component {
               </li>
               <li className="nav-item">
               <NavLink to="/list-customers" className="nav-link">
-                List Customers
+               Customer List
               </NavLink>
               </li>
               <li className="nav-item">

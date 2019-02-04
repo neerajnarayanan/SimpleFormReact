@@ -1,6 +1,4 @@
-import axios, {
-    AxiosPromise
-} from 'axios';
+import axios from 'axios';
 
 
 
@@ -8,7 +6,7 @@ class CustomerServices {
     postCustomerData = (jsondata, callback) => {
         axios({
             method: 'post',
-            url: "this.apiService.channelApi + 'email/addConquestCustomers'",
+            url: 'http://localhost:3000/customers/postcustomerdata',
             data: jsondata,
         }).then((response) => {
             callback(null, {
@@ -20,6 +18,15 @@ class CustomerServices {
         });
     }
 
+    getCustomerData = async () => {
+        try {
+            return await axios.get('http://localhost:3000/customers/getallcustomers', {
+                headers: { "Access-Control-Allow-Origin": "*" }
+            })
+        } catch (error) {
+            console.error(error)
+        }
+    }
 }
 
 export default CustomerServices;
